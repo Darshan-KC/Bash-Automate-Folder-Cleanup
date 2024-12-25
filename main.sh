@@ -1,0 +1,1 @@
+# Automate folder clean up script
