@@ -15,3 +15,8 @@ FOLDER_PATH=$1
 DAYS=$2
 
 # Validate the folder path
+if [ ! -d "$FOLDER_PATH" ]; then
+    echo "Error: Folder '$FOLDER_PATH' does not exist."
+    exit 1
+fi
+
