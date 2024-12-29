@@ -20,3 +20,6 @@ if [ ! -d "$FOLDER_PATH" ]; then
     exit 1
 fi
 
+# Preview the files to be deleted
+echo "The following files older than $DAYS will be deleted: "
+find "$FOLDER_PATH" -type f -mtime +"$DAYS" -print
