@@ -23,3 +23,13 @@ fi
 # Preview the files to be deleted
 echo "The following files older than $DAYS will be deleted: "
 find "$FOLDER_PATH" -type f -mtime +"$DAYS" -print
+
+# Ask the user for confirmation
+read -p "Do you want to delete these files? (y/n): " CONFIRM
+CONFIRM="${CONFIRM,,}"
+
+# Process user's confirmation
+if [ "$CONFIRM" != "y" ]; then
+    echo "Cleanup cancelled."
+    exit 0
+fi
