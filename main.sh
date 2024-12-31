@@ -33,3 +33,5 @@ if [ "$CONFIRM" != "y" ]; then
     echo "Cleanup cancelled."
     exit 0
 fi
+
+# File deletion code starts here
