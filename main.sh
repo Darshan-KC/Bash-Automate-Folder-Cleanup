@@ -35,3 +35,7 @@ if [ "$CONFIRM" != "y" ]; then
 fi
 
 # File deletion code starts here
+find "$FOLDER_PATH" -type f -mtime +"$DAYS" -exec rm -f {} \;
+
+# Completion message
+echo "Cleanup complete. Files older than $DAYS days have been deleted from '$FOLDER_PATH'."
